@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    padding: 15px;
+    box-shadow:0px 2px 10px 0px #000000
+
+}
+
+.description {
+    padding: 15px;
+}
+
+.title {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.subTitle {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.genresList {
+    display: flex;
+    list-style: none;
+}
+
+.genresItem {
+    margin-right: 10px;
+}
