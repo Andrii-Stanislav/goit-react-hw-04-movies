@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, NavLink } from 'react-router-dom';
 
 import Cast from '../../Components/Cast';
 import Reviews from '../../Components/Reviews';
 import FilmCard from '../../Components/FilmCard';
-import AditionalLink from '../../Components/AditionalLink';
 
 import routes from '../../routes';
 import { getMovieById } from '../../services/fetchMovie';
@@ -54,10 +53,22 @@ class MovieDetailsPage extends Component {
             <p>Aditional information</p>
             <ul>
               <li>
-                <AditionalLink film={film} linkTo="Cast" />
+                <NavLink
+                  to={{
+                    pathname: `${routes.moviesPage}/${film.id}/cast`,
+                  }}
+                >
+                  Cast
+                </NavLink>
               </li>
               <li>
-                <AditionalLink film={film} linkTo="Reviews" />
+                <NavLink
+                  to={{
+                    pathname: `${routes.moviesPage}/${film.id}/reviews`,
+                  }}
+                >
+                  Reviews
+                </NavLink>
               </li>
             </ul>
 
